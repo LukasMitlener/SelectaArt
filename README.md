@@ -10,6 +10,7 @@ npm test
 ```
 
 Vercel používá `vercel.json` (`outputDirectory: public`). Při sestavení nahradí SEO adresy doménou z `VERCEL_PROJECT_PRODUCTION_URL` a vloží CSP pro lokální skripty a JSON-LD.
+Dočasný náhled na Vercelu se sestavuje s `noindex`; zdrojový HTML zůstává připravený pro finální doménu.
 
 ## Před ostrým spuštěním
 

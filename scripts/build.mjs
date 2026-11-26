@@ -19,12 +19,15 @@ for (const file of ['index.html','robots.txt','sitemap.xml']) {
   let contents = await readFile(path, 'utf8');
   contents = contents.replaceAll(oldOrigin, origin);
   if (file === 'index.html') {
+    // Vercel is a temporary review link; the source stays indexable for final hosting.
+    contents = contents.replace('content="index,follow,max-image-preview:large"', 'content="noindex,nofollow"');
     const ld = contents.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
     if (!ld) throw new Error('Missing JSON-LD');
     const hash = createHash('sha256').update(ld).digest('base64');
     const csp = `default-src 'none'; script-src 'self' 'sha256-${hash}'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; upgrade-insecure-requests`;
     contents = contents.replace('<title>', `<meta http-equiv="Content-Security-Policy" content="${csp}">\n  <title>`);
   }
+  if (file === 'robots.txt') contents = 'User-agent: *\nDisallow: /\n';
   await writeFile(path, contents);
 }
 console.log(`Built static site for ${origin}`);

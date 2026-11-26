@@ -12,6 +12,7 @@ test('static build contains the story and a restrictive CSP', async () => {
   assert.match(html, /Vzhledem k tomu, že jsem dvakrát moc peněz neměl/);
   assert.match(html, /Content-Security-Policy/);
   assert.match(html, /script-src 'self' 'sha256-/);
+  assert.match(html, /content="noindex,nofollow"/);
 });
 
 test('contact rejects invalid input and foreign origins', async () => {
