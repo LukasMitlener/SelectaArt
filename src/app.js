@@ -1,13 +1,16 @@
 /* Small, dependency-free interactions. No user text is inserted as HTML. */
 const root = document.documentElement;
+const language = window.selectaI18n;
+const translated = (cs, en) => language.locale === 'en' ? en : cs;
 const themeButton = document.querySelector('.theme-toggle');
 const savedTheme = localStorage.getItem('selecta-theme');
-if (savedTheme === 'light') setTheme('light');
+if (savedTheme === 'light') root.dataset.theme = 'light';
+setTheme(root.dataset.theme);
 function setTheme(theme) {
   root.dataset.theme = theme;
   themeButton.setAttribute('aria-pressed', String(theme === 'light'));
-  themeButton.setAttribute('aria-label', theme === 'light' ? 'Přepnout na tmavý režim' : 'Přepnout na světlý režim');
-  themeButton.querySelector('.theme-label').textContent = theme === 'light' ? 'Tma' : 'Světlo';
+  themeButton.setAttribute('aria-label', theme === 'light' ? translated('Přepnout na tmavý režim', 'Switch to dark mode') : translated('Přepnout na světlý režim', 'Switch to light mode'));
+  themeButton.querySelector('.theme-label').textContent = theme === 'light' ? translated('Tma', 'Dark') : translated('Světlo', 'Light');
   themeButton.querySelector('.theme-icon').textContent = theme === 'light' ? '☾' : '☼';
   document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f4f0e9' : '#10100f';
 }
@@ -19,15 +22,20 @@ themeButton.addEventListener('click', () => {
 
 const menuButton = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('#mobile-nav');
+function updateMenuLabel() {
+  menuButton.setAttribute('aria-label', mobileNav.hidden ? translated('Otevřít navigaci', 'Open navigation') : translated('Zavřít navigaci', 'Close navigation'));
+}
+updateMenuLabel();
 menuButton.addEventListener('click', () => {
   mobileNav.hidden = !mobileNav.hidden;
   menuButton.setAttribute('aria-expanded', String(!mobileNav.hidden));
-  menuButton.setAttribute('aria-label', mobileNav.hidden ? 'Otevřít navigaci' : 'Zavřít navigaci');
+  updateMenuLabel();
 });
 mobileNav.addEventListener('click', event => {
   if (event.target.closest('a')) {
     mobileNav.hidden = true;
     menuButton.setAttribute('aria-expanded', 'false');
+    updateMenuLabel();
   }
 });
 
@@ -67,6 +75,16 @@ lightbox.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') stepImage(-1);
   if (event.key === 'ArrowRight') stepImage(1);
 });
+window.addEventListener('languagechange', () => {
+  setTheme(root.dataset.theme);
+  updateMenuLabel();
+  if (lightbox.open) {
+    const item = galleryItems[currentItem];
+    lightboxImage.alt = item.querySelector('img').alt;
+    lightboxCaption.textContent = item.dataset.caption;
+  }
+  if (statusMessage) setStatus(statusMessage);
+});
 
 /* Reveal contact details only after a person interacts with the page. */
 const contacts = {
@@ -85,6 +103,17 @@ for (const button of document.querySelectorAll('[data-reveal]')) button.addEvent
 document.querySelector('#year').textContent = new Date().getFullYear();
 const form = document.querySelector('#contact-form');
 const status = document.querySelector('#form-status');
+let statusMessage = '';
+function setStatus(message) {
+  statusMessage = message;
+  const messages = {
+    invalid: ['Vyplňte prosím všechna povinná pole správně.', 'Please complete all required fields correctly.'],
+    sending: ['Odesílám zprávu…', 'Sending your message…'],
+    success: ['Děkuji. Vaše zpráva byla odeslána.', 'Thank you. Your message has been sent.'],
+    error: ['Zprávu se nepodařilo odeslat. Zobrazte si prosím e-mail vlevo a napište mi přímo.', 'The message could not be sent. Please reveal the email address on the left and write to me directly.']
+  };
+  status.textContent = message ? messages[message][language.locale === 'en' ? 1 : 0] : '';
+}
 form.elements.startedAt.value = String(Date.now());
 form.addEventListener('submit', async event => {
   event.preventDefault();
@@ -93,21 +122,21 @@ form.addEventListener('submit', async event => {
     const invalid = form.querySelector(':invalid');
     invalid?.setAttribute('aria-invalid', 'true');
     invalid?.focus();
-    status.textContent = 'Vyplňte prosím všechna povinná pole správně.';
+    setStatus('invalid');
     return;
   }
   const submit = form.querySelector('[type="submit"]');
   submit.disabled = true;
-  status.textContent = 'Odesílám zprávu…';
+  setStatus('sending');
   const payload = Object.fromEntries(new FormData(form));
   try {
     const response = await fetch(form.action, {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     if (!response.ok) throw new Error(String(response.status));
     form.reset();
     form.elements.startedAt.value = String(Date.now());
-    status.textContent = 'Děkuji. Vaše zpráva byla odeslána.';
+    setStatus('success');
   } catch {
-    status.textContent = 'Zprávu se nepodařilo odeslat. Zobrazte si prosím e-mail vlevo a napište mi přímo.';
+    setStatus('error');
   } finally {
     submit.disabled = false;
   }

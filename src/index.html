@@ -21,7 +21,8 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/portrait.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Selecta Art","url":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/","description":"Umělecká fotografie, reportážní a eventová fotografie, portrétní a svatební fotografie, zakázková kaligrafie a svatební kaligrafie.","image":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/portrait.webp","availableLanguage":"cs"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Selecta Art","url":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/","description":"Umělecká fotografie, reportážní a eventová fotografie, portrétní a svatební fotografie, zakázková kaligrafie a svatební kaligrafie.","image":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/portrait.webp","availableLanguage":["cs","en"]}</script>
+  <script src="/i18n.js" defer></script>
   <script src="/app.js" defer></script>
 </head>
 <body>
@@ -32,6 +33,7 @@
       <nav class="main-nav" aria-label="Hlavní navigace">
         <a href="#o-mne">Příběh</a><a href="#fotografie">Fotografie</a><a href="#kaligrafie">Kaligrafie</a><a href="#galerie">Galerie</a><a href="#kontakt">Kontakt</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Jazyk / Language"><button type="button" data-lang="cs" lang="cs" aria-label="Čeština" aria-pressed="true">CZ</button><button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
       <button class="theme-toggle" type="button" aria-label="Přepnout na světlý režim" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Světlo</span></button>
       <button class="menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
     </div>

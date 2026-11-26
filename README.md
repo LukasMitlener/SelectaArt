@@ -1,6 +1,6 @@
 # Selecta Art — Vercel preview
 
-Responzivní portfolio v češtině. Statický HTML/CSS/JS frontend se sestaví do `public/`; kontaktní formulář používá Vercel Function v `api/contact.js`. Projekt nemá externí balíčky.
+Responzivní portfolio v češtině a angličtině. Přepínač CZ/EN si pamatuje zvolený jazyk; anglickou verzi lze sdílet pomocí `?lang=en`. Statický HTML/CSS/JS frontend se sestaví do `public/`; kontaktní formulář používá Vercel Function v `api/contact.js`. Projekt nemá externí balíčky.
 
 ## Lokálně
 
