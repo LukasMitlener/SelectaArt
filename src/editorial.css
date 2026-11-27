@@ -1,6 +1,8 @@
 @font-face{font-family:'Bodoni Moda';src:url('/assets/fonts/BodoniModa.ttf') format('truetype');font-style:normal;font-weight:400 900;font-display:swap}
 @font-face{font-family:'Bodoni Moda';src:url('/assets/fonts/BodoniModa-Italic.ttf') format('truetype');font-style:italic;font-weight:400 900;font-display:swap}
-:root{--serif:'Bodoni Moda','Bodoni MT',Didot,Georgia,serif}
+@font-face{font-family:'Source Serif 4';src:url('/assets/fonts/SourceSerif4.ttf') format('truetype');font-style:normal;font-weight:200 900;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url('/assets/fonts/SourceSerif4-Italic.ttf') format('truetype');font-style:italic;font-weight:200 900;font-display:swap}
+:root{--serif:'Bodoni Moda','Bodoni MT',Didot,Georgia,serif;--sans:'Source Serif 4',Georgia,serif}
 body{overflow-x:hidden}
 h1,h2{letter-spacing:-.035em}
 .site-header{border-bottom:1px solid color-mix(in srgb,var(--line),transparent 35%)}

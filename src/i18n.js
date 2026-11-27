@@ -11,7 +11,6 @@ const englishText = new Map([
   [`Prohlédnout tvorbu`, `Explore the work`], [`Nezávazná poptávka`, `Get in touch`],
   [`Vidět. Cítit. Uchovat.`, `See. Feel. Preserve.`],
   [`ILUSTRAČNÍ VIZUÁL · NAHRAĎTE PORTRÉTEM AUTORA`, `ILLUSTRATIVE IMAGE · REPLACE WITH THE ARTIST'S PORTRAIT`],
-  [`Přejít níž`, `Scroll down`],
   [`Přečíst celý příběh`, `Read the full story`],
   [`VÝBĚR TVORBY`, `SELECTED WORK`], [`Tři pohledy na`, `Three views of`],
   [`svět Selecta Art.`, `the world of Selecta Art.`], [`Otevřít galerii`, `Open the gallery`],

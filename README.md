@@ -15,6 +15,6 @@ Dočasný náhled na Vercelu se sestavuje s `noindex`; zdrojový HTML zůstává
 ## Před ostrým spuštěním
 
 - `artist-portrait.jpg` je skutečný portrét dodaný autorem. Tři ukázky na úvodu a obsah galerie zatím zůstávají **ilustrační**; nahraďte je vlastní tvorbou a aktualizujte popisky. Stránka Selecta's Choice neuvádí žádné konkrétní dílo jako dostupné k prodeji.
-- Písmo Bodoni Moda v `src/assets/fonts/` pochází z Google Fonts a je šířeno s licencí OFL 1.1.
+- Písma Bodoni Moda a Source Serif 4 v `src/assets/fonts/` pocházejí z Google Fonts a jsou šířena s licencí OFL 1.1. Každé má v adresáři vlastní licenční soubor.
 - Pro doručování formuláře nastavte v prostředí Vercelu `RESEND_API_KEY` a ověřenou odesílací adresu `RESEND_FROM_EMAIL`. Bez nich endpoint vrací 503 a stránka nabídne přímý e-mail.
 - Po přesunu na finální doménu znovu sestavte web s odpovídajícím `VERCEL_PROJECT_PRODUCTION_URL`, aby souhlasily canonical, Open Graph a sitemap.
