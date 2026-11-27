@@ -44,7 +44,7 @@ const englishText = new Map([
   [`ILUSTRAČNÍ VIZUÁL`, `ILLUSTRATIVE IMAGE`],
   [`Fotografie, kaligrafie a svět, který se snažím zachytit.`, `Photography, calligraphy and the world I seek to capture.`],
 
-  [`01 / PŘÍBĚH`, `01 / THE STORY`],
+  [`PŘÍBĚH`, `THE STORY`],
   [`Příběh Selecta Art:`, `The Selecta Art story:`],
   [`Kde se vnitřní svět`, `Where the inner world`],
   [`potkává s vnějším`, `meets the outer one`],
@@ -59,7 +59,6 @@ const englishText = new Map([
   [`Věřím, že umění patří všem – zkušenému umělci i zvídavému začátečníkovi, člověku s profesionálním fotoaparátem i tomu, kdo si všimne stínu na zdi. Zkušeným sběratelům i těm, kteří jen tak zahlédnou obraz na stěně... Umění je vesmírem pro každého.`, `I believe art belongs to everyone – the experienced artist and the curious beginner, the person with a professional camera and the one who notices a shadow on a wall. Seasoned collectors and those who simply glimpse a painting on a wall... Art is a universe open to all.`],
   [`Selecta Art je způsob, jak vnímám svět, jak navazuji vztahy s lidmi a jak přetvářím tyto vjemy v něco hmatatelného. Ve fotografii zachycuji světlo a okamžik, v kaligrafii předávám myšlenky. Obojí v souznění se stává odrazem duše.`, `Selecta Art is how I perceive the world, connect with people and turn these impressions into something tangible. In photography, I capture light and a moment; in calligraphy, I convey thoughts. Together, they become a reflection of the soul.`],
 
-  [`02 / FOTOGRAFIE`, `02 / PHOTOGRAPHY`],
   [`Fotografické služby:`, `Photography services:`],
   [`Emoce ve světle a stínu`, `Emotion in light and shadow`],
   [`Zachycuji okamžiky, osobnosti a příběhy pro jednotlivce, umělce i firmy. Každý snímek má svůj vlastní tep.`, `I capture moments, personalities and stories for individuals, artists and businesses. Every image has a pulse of its own.`],
@@ -78,7 +77,6 @@ const englishText = new Map([
   [`Produktová a komerční fotografie`, `Product and commercial photography`],
   [`Čisté i kreativní snímky pro značky, weby a propagační materiály.`, `Clean or creative images for brands, websites and promotional materials.`],
 
-  [`03 / KALIGRAFIE`, `03 / CALLIGRAPHY`],
   [`Kaligrafické služby:`, `Calligraphy services:`],
   [`Hudba pro oči.`, `Music for the eyes.`],
   [`Místo, kde se slova stávají vizuálním zážitkem a trvalou vzpomínkou. Rukopis jako umění.`, `A place where words become a visual experience and a lasting memory. Handwriting as art.`],
@@ -91,7 +89,6 @@ const englishText = new Map([
   [`Ručně psané citáty a poezie`, `Handwritten quotes and poetry`],
   [`Texty písní, básně a myšlenky navržené jako obrazy pro domovy i kreativní prostory.`, `Lyrics, poems and thoughts composed as artwork for homes and creative spaces.`],
 
-  [`04 / VIZUÁLNÍ SVĚT`, `04 / VISUAL WORLD`],
   [`Galerie fotografií`, `Photography gallery`],
   [`a kaligrafie`, `and calligraphy`],
   [`Výběr ilustračních vizuálů naznačuje atmosféru webu. Před zveřejněním portfolia je nahraďte vlastní tvorbou.`, `These illustrative images suggest the mood of the website. Replace them with original work before publishing the portfolio.`],
@@ -101,7 +98,6 @@ const englishText = new Map([
   [`Svatební detaily`, `Wedding details`], [`Umění inkoustu`, `Ink art`],
   [`Vizuály v této ukázce byly vytvořeny pro návrh webu a nepředstavují skutečné portfolio Selecta Art.`, `The images in this preview were created for the website design and do not represent Selecta Art's actual portfolio.`],
 
-  [`05 / KONTAKT`, `05 / CONTACT`],
   [`Pojďme společně`, `Let's create`], [`vytvořit něco`, `something`], [`smysluplného.`, `meaningful together.`],
   [`Každý projekt začíná nápadem a každý příběh si zaslouží individuální přístup. Hledáte fotografa, umělecký portrét nebo kaligrafický originál? Napište mi.`, `Every project begins with an idea, and every story deserves a personal approach. Looking for a photographer, an artistic portrait or an original calligraphy piece? Write to me.`],
   [`TELEFON`, `PHONE`], [`Zobrazit e-mail`, `Show email`], [`Zobrazit telefon`, `Show phone number`],
