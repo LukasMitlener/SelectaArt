@@ -5,6 +5,7 @@
 :root{--serif:'Bodoni Moda','Bodoni MT',Didot,Georgia,serif;--sans:'Source Serif 4',Georgia,serif}
 body{overflow-x:hidden}
 h1,h2{letter-spacing:-.035em}
+h1 em,h2 em,h3 em,h4 em,h5 em,h6 em{font-style:normal}
 .site-header{border-bottom:1px solid color-mix(in srgb,var(--line),transparent 35%)}
 .header-inner{height:78px;gap:clamp(15px,2vw,30px)}
 .brand-name{font-family:var(--serif);font-size:1rem;font-weight:600;letter-spacing:.25em}
