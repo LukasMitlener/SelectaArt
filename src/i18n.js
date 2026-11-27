@@ -1,6 +1,8 @@
 /* The Czech HTML remains the source copy. English is applied to its text nodes. */
 const englishText = new Map([
   [`Přejít na obsah`, `Skip to content`],
+  [`Úvod`, `Home`], [`Seznam služeb`, `Services`], [`Přehled služeb`, `All services`],
+  [`Celá galerie`, `View all`], [`Celý výběr`, `View all`], [`O mně`, `About me`],
   [`Příběh`, `Story`], [`Fotografie`, `Photography`], [`Kaligrafie`, `Calligraphy`], [`Galerie`, `Gallery`], [`Kontakt`, `Contact`],
   [`FOTOGRAFIE & KALIGRAFIE`, `PHOTOGRAPHY & CALLIGRAPHY`],
   [`Umělecká fotografie`, `Fine art photography`],
@@ -10,6 +12,37 @@ const englishText = new Map([
   [`Vidět. Cítit. Uchovat.`, `See. Feel. Preserve.`],
   [`ILUSTRAČNÍ VIZUÁL · NAHRAĎTE PORTRÉTEM AUTORA`, `ILLUSTRATIVE IMAGE · REPLACE WITH THE ARTIST'S PORTRAIT`],
   [`Přejít níž`, `Scroll down`],
+  [`Přečíst celý příběh`, `Read the full story`],
+  [`VÝBĚR TVORBY`, `SELECTED WORK`], [`Tři pohledy na`, `Three views of`],
+  [`svět Selecta Art.`, `the world of Selecta Art.`], [`Otevřít galerii`, `Open the gallery`],
+  [`Reportáž`, `Documentary`], [`Portrét`, `Portrait`],
+  [`Tyto tři snímky jsou zatím ilustrační. Nahradíme je skutečnou tvorbou autora.`, `These three images are illustrative for now. They will be replaced with the artist's own work.`],
+
+  [`SEZNAM SLUŽEB`, `SERVICES`], [`& kaligrafie.`, `& calligraphy.`],
+  [`Dvě cesty, jak uchovat to, na čem záleží.`, `Two ways to preserve what matters.`],
+  [`KONTAKT`, `CONTACT`], [`Máte nápad?`, `Have an idea?`], [`Napište mi.`, `Write to me.`],
+  [`Rád si poslechnu váš příběh a společně najdeme podobu, která mu bude slušet.`, `I would love to hear your story and find the right way to bring it to life.`],
+  [`Přejít na kontakt`, `Get in touch`],
+  [`GALERIE`, `GALLERY`], [`Obrazy, které`, `Images that`], [`zůstávají.`, `stay with you.`],
+  [`Fotografie a kaligrafie v jednom vizuálním světě. Zatím používáme ilustrační ukázky.`, `Photography and calligraphy in one visual world. The images are illustrative for now.`],
+  [`FOTOGRAFIE`, `PHOTOGRAPHY`], [`KALIGRAFIE`, `CALLIGRAPHY`],
+  [`Okamžiky`, `Moments`], [`ve světle.`, `in the light.`],
+  [`Reportáž, portrét, hudba, svatba i detail.`, `Documentary work, portraits, music, weddings and details.`],
+  [`Příběhy`, `Stories`], [`v rukopisu.`, `in handwriting.`],
+  [`Slova a tvary, které zůstávají.`, `Words and forms that endure.`],
+  [`Umění pro`, `Art for`], [`váš prostor.`, `your space.`],
+  [`Výběr autorských fotografií a kaligrafických originálů k pořízení. První kolekci připravuji.`, `A selection of original photographs and calligraphy pieces to own. The first collection is in progress.`],
+  [`Autorské`, `Original`], [`fotografie.`, `photographs.`],
+  [`Výběr fotografických tisků pro váš prostor připravuji. Pokud vás zajímá konkrétní motiv nebo formát, napište mi.`, `I am preparing a collection of photographic prints for your space. If you have a particular image or format in mind, write to me.`],
+  [`První kolekci připravuji`, `First collection in progress`],
+  [`Zeptat se na dostupnost`, `Ask about availability`],
+  [`Originály`, `Originals`], [`psané rukou.`, `written by hand.`],
+  [`Kaligrafická díla a osobní zakázky vznikají z myšlenek, které mají zůstat. Napište mi, co byste chtěli zachytit.`, `Calligraphy pieces and personal commissions begin with ideas worth keeping. Tell me what you would like to capture.`],
+  [`Napsat o originál`, `Ask about an original`],
+  [`Zobrazené vizuály jsou ilustrační; nepředstavují dostupná díla k prodeji.`, `The images shown are illustrative and do not represent works currently available for sale.`],
+  [`O MNĚ`, `ABOUT ME`], [`Selecta Art.`, `Selecta Art.`],
+  [`ILUSTRAČNÍ VIZUÁL`, `ILLUSTRATIVE IMAGE`],
+  [`Fotografie, kaligrafie a svět, který se snažím zachytit.`, `Photography, calligraphy and the world I seek to capture.`],
 
   [`01 / PŘÍBĚH`, `01 / THE STORY`],
   [`Příběh Selecta Art:`, `The Selecta Art story:`],
@@ -81,9 +114,20 @@ const englishText = new Map([
 ]);
 
 const englishAttributes = new Map([
+  [`Portrét autora Selecta Art`, `Portrait of the Selecta Art artist`],
+  [`Ilustrační koncertní fotografie`, `Illustrative concert photograph`],
+  [`Ilustrační portrétní fotografie`, `Illustrative portrait photograph`],
+  [`Ilustrační kaligrafická práce`, `Illustrative calligraphy work`],
+  [`Ilustrační fotografie pro připravovanou kolekci`, `Illustrative photograph for the upcoming collection`],
+  [`Ilustrační kaligrafie pro připravovanou kolekci`, `Illustrative calligraphy for the upcoming collection`],
+  [`Selecta Art: umělecká fotografie, kaligrafie a osobní příběhy ve světle a stínu.`, `Selecta Art: fine art photography, calligraphy and personal stories in light and shadow.`],
+  [`Fotografické a kaligrafické služby Selecta Art. Portréty, události, svatby, rukopis i osobní dárky.`, `Selecta Art photography and calligraphy services: portraits, events, weddings, handwriting and personal gifts.`],
+  [`Galerie fotografie a kaligrafie Selecta Art. Zatím ukázkové vizuály pro návrh webu.`, `Selecta Art photography and calligraphy gallery. Illustrative images for the website design.`],
+  [`Připravovaná kolekce autorských fotografií a kaligrafických originálů Selecta Art.`, `An upcoming collection of original photographs and calligraphy pieces by Selecta Art.`],
+  [`Celý příběh Selecta Art: od prvního fotoaparátu v roce 2011 po fotografii a kaligrafii dnes.`, `The full Selecta Art story: from the first camera in 2011 to photography and calligraphy today.`],
   [`Selecta Art, úvod`, `Selecta Art, home`],
   [`Hlavní navigace`, `Main navigation`], [`Mobilní navigace`, `Mobile navigation`],
-  [`Filtrovat galerii`, `Filter gallery`], [`Náhled fotografie`, `Image preview`],
+  [`Filtrovat galerii`, `Filter gallery`], [`Náhled díla`, `Artwork preview`],
   [`Zavřít náhled`, `Close preview`], [`Předchozí obrázek`, `Previous image`], [`Další obrázek`, `Next image`],
   [`Napište pár slov o svém projektu...`, `Tell me a little about your project...`],
   [`Ilustrační portrét fotografa v dramatickém světle`, `Illustrative portrait of a photographer in dramatic light`],
@@ -110,7 +154,7 @@ const englishAttributes = new Map([
 ]);
 
 const czechTitle = document.title;
-const englishTitle = 'Selecta Art – Fine art photography and bespoke calligraphy';
+const englishTitle = document.documentElement.dataset.titleEn || 'Selecta Art – Fine art photography and bespoke calligraphy';
 const textNodes = [];
 const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
 for (let node; (node = walker.nextNode());) {

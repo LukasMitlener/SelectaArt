@@ -14,11 +14,11 @@ await cp(source, output, {recursive:true});
 const oldOrigin = 'https://selecta-art-portfolio.lukas-mitlener.chatgpt.site';
 const host = process.env.VERCEL_PROJECT_PRODUCTION_URL;
 const origin = host ? `https://${host}` : oldOrigin;
-for (const file of ['index.html','robots.txt','sitemap.xml']) {
+for (const file of ['index.html','services.html','gallery.html','choice.html','story.html','robots.txt','sitemap.xml']) {
   const path = join(output, file);
   let contents = await readFile(path, 'utf8');
   contents = contents.replaceAll(oldOrigin, origin);
-  if (file === 'index.html') {
+  if (file.endsWith('.html')) {
     // Vercel is a temporary review link; the source stays indexable for final hosting.
     contents = contents.replace('content="index,follow,max-image-preview:large"', 'content="noindex,nofollow"');
     const ld = contents.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];

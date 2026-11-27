@@ -1,114 +1,74 @@
 <!doctype html>
-<html lang="cs" data-theme="dark">
+<html lang="cs" data-theme="dark" data-page="home" data-title-en="Selecta Art – Fine art photography and bespoke calligraphy">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#10100f">
   <title>Selecta Art – Umělecká fotografie a zakázková kaligrafie</title>
-  <meta name="description" content="Selecta Art: umělecká, reportážní, eventová, portrétní a svatební fotografie. Zakázková a svatební kaligrafie, ručně psané citáty a osobní dárky.">
+  <meta name="description" content="Selecta Art: umělecká fotografie, kaligrafie a osobní příběhy ve světle a stínu.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Selecta Art">
   <meta property="og:title" content="Selecta Art – Umělecká fotografie a zakázková kaligrafie">
-  <meta property="og:description" content="Světlo, stín a tah pera. Autentické příběhy ve fotografii a kaligrafii.">
+  <meta property="og:description" content="Selecta Art: umělecká fotografie, kaligrafie a osobní příběhy ve světle a stínu.">
   <meta property="og:url" content="https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/">
-  <meta property="og:image" content="https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/portrait.webp">
-  <meta property="og:image:alt" content="Ilustrační portrét fotografa v dramatickém světle">
+  <meta property="og:image" content="https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/artist-portrait.jpg">
+  <meta property="og:image:alt" content="Portrét autora Selecta Art">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/assets/portrait.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/assets/artist-portrait.jpg" as="image" type="image/jpeg" fetchpriority="high">
   <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Selecta Art","url":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/","description":"Umělecká fotografie, reportážní a eventová fotografie, portrétní a svatební fotografie, zakázková kaligrafie a svatební kaligrafie.","image":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/portrait.webp","availableLanguage":["cs","en"]}</script>
+  <link rel="stylesheet" href="/editorial.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Selecta Art","url":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/","description":"Umělecká fotografie, reportážní a eventová fotografie, portrétní a svatební fotografie, zakázková kaligrafie a svatební kaligrafie.","image":"https://selecta-art-portfolio.lukas-mitlener.chatgpt.site/assets/artist-portrait.jpg","availableLanguage":["cs","en"]}</script>
   <script src="/i18n.js" defer></script>
   <script src="/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Přejít na obsah</a>
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#uvod" aria-label="Selecta Art, úvod"><span class="brand-mark" aria-hidden="true">S<span>·</span>A</span><span class="brand-name">SELECTA <em>ART</em></span></a>
-      <nav class="main-nav" aria-label="Hlavní navigace">
-        <a href="#o-mne">Příběh</a><a href="#fotografie">Fotografie</a><a href="#kaligrafie">Kaligrafie</a><a href="#galerie">Galerie</a><a href="#kontakt">Kontakt</a>
-      </nav>
-      <div class="language-switch" role="group" aria-label="Jazyk / Language"><button type="button" data-lang="cs" lang="cs" aria-label="Čeština" aria-pressed="true">CZ</button><button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
+<a class="skip-link" href="#main">Přejít na obsah</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Selecta Art, úvod"><span class="brand-mark" aria-hidden="true">S<span>·</span>A</span><span class="brand-name">SELECTA <em>ART</em></span></a>
+    <nav id="site-nav" class="main-nav" aria-label="Hlavní navigace">
+      <a href="/">Úvod</a>
+      <details class="nav-menu"><summary>Seznam služeb</summary><div class="nav-popover"><a href="/services.html">Přehled služeb</a><a href="/services.html#fotografie">Fotografie</a><a href="/services.html#kaligrafie">Kaligrafie</a></div></details>
+      <details class="nav-menu"><summary>Galerie</summary><div class="nav-popover"><a href="/gallery.html">Celá galerie</a><a href="/gallery.html#fotografie">Fotografie</a><a href="/gallery.html#kaligrafie">Kaligrafie</a></div></details>
+      <details class="nav-menu"><summary>Selecta's Choice</summary><div class="nav-popover"><a href="/choice.html">Celý výběr</a><a href="/choice.html#fotografie">Fotografie</a><a href="/choice.html#kaligrafie">Kaligrafie</a></div></details>
+      <a href="/story.html">O mně</a><a href="/#kontakt">Kontakt</a>
+    </nav>
+    <div class="header-tools"><div class="language-switch" role="group" aria-label="Jazyk / Language"><button type="button" data-lang="cs" lang="cs" aria-label="Čeština" aria-pressed="true">CZ</button><button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
       <button class="theme-toggle" type="button" aria-label="Přepnout na světlý režim" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Světlo</span></button>
-      <button class="menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
-    </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobilní navigace" hidden><a href="#o-mne">Příběh</a><a href="#fotografie">Fotografie</a><a href="#kaligrafie">Kaligrafie</a><a href="#galerie">Galerie</a><a href="#kontakt">Kontakt</a></nav>
-  </header>
-
-  <main id="main">
-    <section class="hero shell" id="uvod" aria-labelledby="hero-title">
+      <button class="menu-toggle" type="button" aria-label="Otevřít navigaci" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button></div>
+  </div>
+</header>
+<main id="main">
+<section class="hero shell" id="uvod" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> FOTOGRAFIE & KALIGRAFIE</p>
         <h1 id="hero-title">Selecta Art <span class="dash">—</span><br><em>Umělecká fotografie</em><br>a zakázková kaligrafie</h1>
         <p class="hero-lead">Prostor, kde se světlo a stín potkávají s tahem pera. Zachycuji prchavé emoce, autentické příběhy a tvořím umění s duší.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#galerie">Prohlédnout tvorbu</a><a class="text-link" href="#kontakt">Nezávazná poptávka <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="/gallery.html">Prohlédnout tvorbu</a><a class="text-link" href="#kontakt">Nezávazná poptávka <span aria-hidden="true">↗</span></a></div>
         <p class="hero-note">Vidět. Cítit. Uchovat.</p>
       </div>
-      <div class="hero-visual"><div class="hero-image-wrap"><img src="/assets/portrait.webp" alt="Ilustrační portrét fotografa s fotoaparátem ve světle a stínu" width="418" height="418" fetchpriority="high"><span class="image-caption">ILUSTRAČNÍ VIZUÁL · NAHRAĎTE PORTRÉTEM AUTORA</span></div><span class="vertical-word" aria-hidden="true">SELECTA ART · EST. 2011</span></div>
+      <div class="hero-visual"><div class="hero-image-wrap"><img src="/assets/artist-portrait.jpg" alt="Portrét autora Selecta Art" width="1360" height="2044" fetchpriority="high"></div><span class="vertical-word" aria-hidden="true">SELECTA ART · EST. 2011</span></div>
       <a class="scroll-hint" href="#o-mne">Přejít níž <span aria-hidden="true">↓</span></a>
     </section>
-
-    <section class="section about-section" id="o-mne" aria-labelledby="about-title"><div class="shell about-grid">
+<section class="section about-section" id="o-mne" aria-labelledby="about-title"><div class="shell about-grid">
       <div><p class="eyebrow">01 / PŘÍBĚH</p><h2 id="about-title">Příběh Selecta Art:<br><em>Kde se vnitřní svět</em><br>potkává s vnějším</h2></div>
-      <div class="about-copy"><p class="large-copy">…S focením jsem začal v roce 2011, kdy jsem hledal způsob, jak dát podobu emocím a pocitům ukrytým hluboko v sobě. Jako introvert a umělecky založený pozorovatel jsem se na svět vždy díval trochu jiným pohledem – všímal jsem si detailů, nálad, gest a okamžiků, které by jinak mohly zůstat přehlíženy. Fotografie pro mě nikdy nebyla jen o samotném pořízení snímku... Je o emocích, okamžicích, radosti i smutku. Jde o zachycení pocitu dříve, než navždy zmizí.</p></div>
-    </div><article class="shell full-story" aria-labelledby="full-story-title">
-      <h3 id="full-story-title">Selecta Art</h3>
-      <p>...představuje kreativní stránku mého nitra. Prostor, kde se potkává fotografie, kaligrafie, hudba, příroda a vše, co propojuje můj vnitřní svět s tím vnějším. Někdy introvert, jindy extrovert.</p>
-      <p>… myšlenka vznikla ve chladný podzimní večer roku 2011 kdy jsem hledal způsob, jak dát podobu emocím a pocitům, které se ve mně skrývaly. Jako introvert a umělecky založený pozorovatel jsem se na svět vždy díval trochu jiným pohledem – všímal jsem si detailů, nálad, gest i okamžiků, které by jinak mohly zůstat bez povšimnutí.</p>
-      <p>Vzhledem k tomu, že jsem dvakrát moc peněz neměl, to byl docela švihlý nápad, ale hned druhý den jsem si koupil svůj první fotoaparát... a narodil projekt Selecta Art.</p>
-      <p>Fotografie se okamžitě stala mou vášní. Začínal jsem fotit události, interprety, energii a ducha reggae kultury ve svém okolí, protože jsem s ní byl hluboce spjat – sám jsem totiž byl interpretem. Nelákalo mě jen to, co se dělo před objektivem, ale i to, co bylo možné cítit za ním: okamžiky v čase, pohyb, spojení mezi umělcem a publikem či pomíjivá emoce.</p>
-      <p>Fotografie pro mě nikdy nebyla pouhým snímkem...Jsou to emoce, momenty, radost i smutek. Zachycení pocitu dříve, než zmizí.</p>
-      <p>Protože neustále zkoumám a hledám nové způsoby, jak propojit svůj vnitřní vesmír s fyzickým světem, jsem v roce 2014 objevil kaligrafii. Pro někoho to může znamenat „pouhé“ psaní na papír, ale ve mně se postupně proměnila v něco mnohem hlubšího. Věřím, že kaligrafie je hudbou pro oči a potravou pro duši, stala se pro mě dokonalým spojením mé mysli a fyzického světa.</p>
-      <p>Dnes je Selecta Art kreativní stránkou mé osobnosti – prostorem, kde mohu kombinovat fotografii, kaligrafii, přírodu, muziku a různé formy fyzického i duchovního umění. Hledám krásu, která se skrývá jak ve výjimečném, tak ve všedním okamžiku...v lidech, v krajině, v nedokonalých tvarech, v hudbě, v tichu i v momentech, které nelze zopakovat.</p>
-      <p>Věřím, že umění patří všem – zkušenému umělci i zvídavému začátečníkovi, člověku s profesionálním fotoaparátem i tomu, kdo si všimne stínu na zdi. Zkušeným sběratelům i těm, kteří jen tak zahlédnou obraz na stěně... Umění je vesmírem pro každého.</p>
-      <p>Selecta Art je způsob, jak vnímám svět, jak navazuji vztahy s lidmi a jak přetvářím tyto vjemy v něco hmatatelného. Ve fotografii zachycuji světlo a okamžik, v kaligrafii předávám myšlenky. Obojí v souznění se stává odrazem duše.</p>
-    </article></section>
-
-    <section class="section services-section" id="fotografie" aria-labelledby="photo-title"><div class="shell">
-      <div class="section-heading"><div><p class="eyebrow">02 / FOTOGRAFIE</p><h2 id="photo-title">Fotografické služby:<br><em>Emoce ve světle a stínu</em></h2></div><p>Zachycuji okamžiky, osobnosti a příběhy pro jednotlivce, umělce i firmy. Každý snímek má svůj vlastní tep.</p></div>
-      <div class="services-grid photo-services">
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">◌</span><h3>Reportážní a eventová fotografie</h3><p>Festivaly, koncerty, kulturní akce a firemní setkání. Autentická atmosféra tak, jak se odehrává.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">◐</span><h3>Portrétní a rodinná fotografie</h3><p>Individuální, párové i rodinné portréty s přirozeným charakterem a opravdovým výrazem.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">✧</span><h3>Umělecké a kreativní portréty</h3><p>Světlo, stíny a vizuální vyprávění proměňují portrét v osobní umělecké dílo.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">◇</span><h3>Svatební fotografie</h3><p>Váš den od intimních detailů po spontánní oslavy, citlivě a bez zbytečného aranžování.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">♫</span><h3>Hudební fotografie a zákulisí</h3><p>Živá hudba, DJové, performeři a energie mezi umělcem a publikem.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">◎</span><h3>Lifestylová a osobní brandingová fotografie</h3><p>Vizuální příběhy pro kreativce, umělce a značky s autentickou identitou.</p></article>
-        <article class="service-card"><span class="service-symbol" aria-hidden="true">▱</span><h3>Produktová a komerční fotografie</h3><p>Čisté i kreativní snímky pro značky, weby a propagační materiály.</p></article>
-      </div>
+      <div class="about-copy"><p class="large-copy">…S focením jsem začal v roce 2011, kdy jsem hledal způsob, jak dát podobu emocím a pocitům ukrytým hluboko v sobě. Jako introvert a umělecky založený pozorovatel jsem se na svět vždy díval trochu jiným pohledem – všímal jsem si detailů, nálad, gest a okamžiků, které by jinak mohly zůstat přehlíženy. Fotografie pro mě nikdy nebyla jen o samotném pořízení snímku... Je o emocích, okamžicích, radosti i smutku. Jde o zachycení pocitu dříve, než navždy zmizí.</p><p class="about-link"><a href="/story.html">Přečíst celý příběh</a></p></div>
     </div></section>
-
-    <section class="section calligraphy-section" id="kaligrafie" aria-labelledby="calligraphy-title"><div class="shell calligraphy-layout"><div class="calligraphy-intro"><p class="eyebrow">03 / KALIGRAFIE</p><h2 id="calligraphy-title">Kaligrafické služby:<br><em>Hudba pro oči.</em></h2><p>Místo, kde se slova stávají vizuálním zážitkem a trvalou vzpomínkou. Rukopis jako umění.</p><img src="/assets/ink.webp" alt="Ilustrační abstraktní tahy štětce na papíře – zakázková kaligrafie" width="418" height="418" loading="lazy"></div><div class="calligraphy-list">
-      <article><span>01</span><div><h3>Zakázková a umělecká kaligrafie</h3><p>Ručně psaná slova, jména a fráze proměněné v originální kompozice.</p></div></article>
-      <article><span>02</span><div><h3>Kaligrafie pro svatby a události</h3><p>Svatební kaligrafie pro oznámení, jmenovky, menu, obálky i zasedací pořádky.</p></div></article>
-      <article><span>03</span><div><h3>Personalizované dárky na míru</h3><p>Jména, data a osobní vzkazy jako smysluplný a trvalý dar.</p></div></article>
-      <article><span>04</span><div><h3>Ručně psané citáty a poezie</h3><p>Texty písní, básně a myšlenky navržené jako obrazy pro domovy i kreativní prostory.</p></div></article>
-    </div></div></section>
-
-    <section class="section gallery-section" id="galerie" aria-labelledby="gallery-title"><div class="shell"><div class="section-heading"><div><p class="eyebrow">04 / VIZUÁLNÍ SVĚT</p><h2 id="gallery-title">Galerie fotografií<br><em>a kaligrafie</em></h2></div><p>Výběr ilustračních vizuálů naznačuje atmosféru webu. Před zveřejněním portfolia je nahraďte vlastní tvorbou.</p></div>
-      <div class="gallery-filters" role="group" aria-label="Filtrovat galerii"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Vše</button><button type="button" class="filter" data-filter="photo" aria-pressed="false">Fotografie</button><button type="button" class="filter" data-filter="calligraphy" aria-pressed="false">Kaligrafie</button></div>
-      <div class="gallery-grid">
-        <button class="gallery-item wide" type="button" data-category="photo" data-src="/assets/concert.webp" data-caption="Reportážní a eventová fotografie – koncertní atmosféra"><img src="/assets/concert.webp" alt="Ilustrační reportážní a eventová fotografie koncertu v teplém světle" width="418" height="418" loading="lazy"><span>Reportáž & eventy</span></button>
-        <button class="gallery-item" type="button" data-category="photo" data-src="/assets/portrait-woman.webp" data-caption="Portrétní fotografie – přirozený výraz"><img src="/assets/portrait-woman.webp" alt="Ilustrační portrétní fotografie ženy v přirozeném světle" width="418" height="418" loading="lazy"><span>Portréty</span></button>
-        <button class="gallery-item" type="button" data-category="photo" data-src="/assets/wedding.webp" data-caption="Svatební fotografie – spontánní chvíle"><img src="/assets/wedding.webp" alt="Ilustrační svatební fotografie páru v intimním okamžiku" width="418" height="418" loading="lazy"><span>Svatby</span></button>
-        <button class="gallery-item" type="button" data-category="photo" data-src="/assets/dj.webp" data-caption="Hudební fotografie – DJ v zákulisí"><img src="/assets/dj.webp" alt="Ilustrační hudební fotografie DJe v zákulisí" width="418" height="418" loading="lazy"><span>Hudba & zákulisí</span></button>
-        <button class="gallery-item" type="button" data-category="photo" data-src="/assets/product.webp" data-caption="Produktová a komerční fotografie – keramický detail"><img src="/assets/product.webp" alt="Ilustrační produktová fotografie keramiky ve světle a stínu" width="418" height="418" loading="lazy"><span>Produkt</span></button>
-        <button class="gallery-item" type="button" data-category="calligraphy" data-src="/assets/pen.webp" data-caption="Zakázková kaligrafie – práce perem"><img src="/assets/pen.webp" alt="Ilustrační zakázková kaligrafie psaná perem na papír" width="418" height="418" loading="lazy"><span>Rukopis</span></button>
-        <button class="gallery-item" type="button" data-category="calligraphy" data-src="/assets/cards.webp" data-caption="Svatební kaligrafie – ručně zdobené jmenovky"><img src="/assets/cards.webp" alt="Ilustrační svatební kaligrafie na papírových jmenovkách" width="418" height="418" loading="lazy"><span>Svatební detaily</span></button>
-        <button class="gallery-item" type="button" data-category="calligraphy" data-src="/assets/ink.webp" data-caption="Ručně psané citáty a umělecké tahy inkoustem"><img src="/assets/ink.webp" alt="Ilustrační abstraktní inkoustové tahy pro ručně psané citáty" width="418" height="418" loading="lazy"><span>Umění inkoustu</span></button>
-      </div>
-      <p class="gallery-disclaimer">Vizuály v této ukázce byly vytvořeny pro návrh webu a nepředstavují skutečné portfolio Selecta Art.</p>
-    </div></section>
-
-    <section class="section contact-section" id="kontakt" aria-labelledby="contact-title"><div class="shell contact-grid"><div><p class="eyebrow">05 / KONTAKT</p><h2 id="contact-title">Pojďme společně<br><em>vytvořit něco</em><br>smysluplného.</h2><p>Každý projekt začíná nápadem a každý příběh si zaslouží individuální přístup. Hledáte fotografa, umělecký portrét nebo kaligrafický originál? Napište mi.</p><div class="contact-details"><div><span>E-MAIL</span><button type="button" data-reveal="email">Zobrazit e-mail</button></div><div><span>TELEFON</span><button type="button" data-reveal="phone">Zobrazit telefon</button></div></div></div>
+<section class="section featured-section" aria-labelledby="featured-title"><div class="shell"><div class="featured-heading"><p class="eyebrow">VÝBĚR TVORBY</p><h2 id="featured-title">Tři pohledy na <em>svět Selecta Art.</em></h2><a href="/gallery.html">Otevřít galerii</a></div><div class="featured-grid">
+  <a href="/gallery.html#fotografie"><img src="/assets/concert.webp" alt="Ilustrační koncertní fotografie" width="418" height="418" loading="lazy"><span>Reportáž</span></a>
+  <a href="/gallery.html#fotografie"><img src="/assets/portrait-woman.webp" alt="Ilustrační portrétní fotografie" width="418" height="418" loading="lazy"><span>Portrét</span></a>
+  <a href="/gallery.html#kaligrafie"><img src="/assets/pen.webp" alt="Ilustrační kaligrafická práce" width="418" height="418" loading="lazy"><span>Kaligrafie</span></a>
+  </div><p class="gallery-disclaimer">Tyto tři snímky jsou zatím ilustrační. Nahradíme je skutečnou tvorbou autora.</p></div></section>
+<section class="section contact-section" id="kontakt" aria-labelledby="contact-title"><div class="shell contact-grid"><div><p class="eyebrow">05 / KONTAKT</p><h2 id="contact-title">Pojďme společně<br><em>vytvořit něco</em><br>smysluplného.</h2><p>Každý projekt začíná nápadem a každý příběh si zaslouží individuální přístup. Hledáte fotografa, umělecký portrét nebo kaligrafický originál? Napište mi.</p><div class="contact-details"><div><span>E-MAIL</span><button type="button" data-reveal="email">Zobrazit e-mail</button></div><div><span>TELEFON</span><button type="button" data-reveal="phone">Zobrazit telefon</button></div></div></div>
       <form id="contact-form" class="contact-form" method="post" action="/api/contact" novalidate><h3>Řekněte mi o svém nápadu</h3><p>Ozvu se vám osobně, jakmile to bude možné.</p><div class="form-row"><label>Vaše jméno<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label><label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="254"></label></div><label>Co vás zajímá?<select name="service" required><option value="">Vyberte službu</option><option value="fotografie">Fotografie</option><option value="kaligrafie">Kaligrafie</option><option value="jine">Jiné</option></select></label><label>Váš nápad<textarea name="message" rows="5" required minlength="10" maxlength="3000" placeholder="Napište pár slov o svém projektu..."></textarea></label><div class="honeypot" aria-hidden="true"><label>Webová stránka<input name="website" tabindex="-1" autocomplete="off"></label></div><input type="hidden" name="startedAt" value=""><button class="button button-primary submit-button" type="submit">Odeslat poptávku</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p><p class="form-privacy">Údaje použiji pouze k odpovědi na vaši zprávu. Formulář vyžaduje nastavené doručování e-mailů.</p></form>
     </div></section>
-  </main>
-  <footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="#uvod"><span class="brand-mark" aria-hidden="true">S<span>·</span>A</span><span class="brand-name">SELECTA <em>ART</em></span></a><p>Světlo. Stín. Příběh.</p><small>© <span id="year">2026</span> Selecta Art. Všechna práva vyhrazena.</small></div></footer>
-  <dialog id="lightbox" class="lightbox" aria-label="Náhled fotografie"><button class="lightbox-close" type="button" aria-label="Zavřít náhled">×</button><figure><img alt=""><figcaption></figcaption></figure><div class="lightbox-controls"><button type="button" data-step="-1" aria-label="Předchozí obrázek">←</button><button type="button" data-step="1" aria-label="Další obrázek">→</button></div></dialog>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">S<span>·</span>A</span><span class="brand-name">SELECTA <em>ART</em></span></a><p>Světlo. Stín. Příběh.</p><small>© <span id="year">2026</span> Selecta Art. Všechna práva vyhrazena.</small></div></footer>
+
 </body>
 </html>

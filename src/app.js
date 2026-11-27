@@ -21,19 +21,33 @@ themeButton.addEventListener('click', () => {
 });
 
 const menuButton = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('#mobile-nav');
+const mobileNav = document.querySelector('#site-nav');
 function updateMenuLabel() {
-  menuButton.setAttribute('aria-label', mobileNav.hidden ? translated('Otevřít navigaci', 'Open navigation') : translated('Zavřít navigaci', 'Close navigation'));
+  menuButton.setAttribute('aria-label', root.classList.contains('nav-open') ? translated('Zavřít navigaci', 'Close navigation') : translated('Otevřít navigaci', 'Open navigation'));
 }
 updateMenuLabel();
 menuButton.addEventListener('click', () => {
-  mobileNav.hidden = !mobileNav.hidden;
-  menuButton.setAttribute('aria-expanded', String(!mobileNav.hidden));
+  const open = root.classList.toggle('nav-open');
+  menuButton.setAttribute('aria-expanded', String(open));
   updateMenuLabel();
 });
 mobileNav.addEventListener('click', event => {
   if (event.target.closest('a')) {
-    mobileNav.hidden = true;
+    root.classList.remove('nav-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    updateMenuLabel();
+  }
+});
+for (const menu of mobileNav.querySelectorAll('details')) menu.addEventListener('toggle', () => {
+  if (menu.open) for (const sibling of mobileNav.querySelectorAll('details')) if (sibling !== menu) sibling.open = false;
+});
+document.addEventListener('click', event => {
+  if (!event.target.closest('.main-nav')) for (const menu of mobileNav.querySelectorAll('details')) menu.open = false;
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    for (const menu of mobileNav.querySelectorAll('details')) menu.open = false;
+    root.classList.remove('nav-open');
     menuButton.setAttribute('aria-expanded', 'false');
     updateMenuLabel();
   }
@@ -52,8 +66,8 @@ for (const button of filterButtons) button.addEventListener('click', () => {
 });
 
 const lightbox = document.querySelector('#lightbox');
-const lightboxImage = lightbox.querySelector('img');
-const lightboxCaption = lightbox.querySelector('figcaption');
+const lightboxImage = lightbox?.querySelector('img');
+const lightboxCaption = lightbox?.querySelector('figcaption');
 let currentItem = 0;
 function openItem(item) {
   currentItem = galleryItems.indexOf(item);
@@ -63,27 +77,27 @@ function openItem(item) {
   if (!lightbox.open) lightbox.showModal();
 }
 for (const item of galleryItems) item.addEventListener('click', () => openItem(item));
-lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
-lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
+lightbox?.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+lightbox?.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
 function stepImage(direction) {
   const visible = galleryItems.filter(item => !item.hidden);
   const position = visible.indexOf(galleryItems[currentItem]);
   openItem(visible[(position + direction + visible.length) % visible.length]);
 }
-for (const button of lightbox.querySelectorAll('[data-step]')) button.addEventListener('click', () => stepImage(Number(button.dataset.step)));
-lightbox.addEventListener('keydown', event => {
+for (const button of lightbox?.querySelectorAll('[data-step]') || []) button.addEventListener('click', () => stepImage(Number(button.dataset.step)));
+lightbox?.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') stepImage(-1);
   if (event.key === 'ArrowRight') stepImage(1);
 });
 window.addEventListener('languagechange', () => {
   setTheme(root.dataset.theme);
   updateMenuLabel();
-  if (lightbox.open) {
+  if (lightbox?.open) {
     const item = galleryItems[currentItem];
     lightboxImage.alt = item.querySelector('img').alt;
     lightboxCaption.textContent = item.dataset.caption;
   }
-  if (statusMessage) setStatus(statusMessage);
+  if (statusMessage && status) setStatus(statusMessage);
 });
 
 /* Reveal contact details only after a person interacts with the page. */
@@ -114,6 +128,7 @@ function setStatus(message) {
   };
   status.textContent = message ? messages[message][language.locale === 'en' ? 1 : 0] : '';
 }
+if (form) {
 form.elements.startedAt.value = String(Date.now());
 form.addEventListener('submit', async event => {
   event.preventDefault();
@@ -141,3 +156,4 @@ form.addEventListener('submit', async event => {
     submit.disabled = false;
   }
 });
+}
